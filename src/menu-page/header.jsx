@@ -7,7 +7,7 @@ const MenuHeader = () => {
         <>
             <HeaderTemplate
                 img={MenuHeaderImage}
-                height={''}
+                height={'h-[200px] md:h-[500px] lg:h-[600px]'}
                 titleImg={TitleLogo}
             />
         </>
