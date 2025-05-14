@@ -6,10 +6,10 @@ const SectionTemplate = ({title, description1, description2, img, flex, link, bu
 
     return (
         <div className="w-full overflow-x-hidden bg-white text-[#221B1A] flex justify-center py-20 md:py-40">
-            <div className={`flex items-center gap-5 md:gap-20 flex-col w-full md:w-[800px] lg:w-[1000px] xl:w-[1300px] ${flex}`}>
+            <div className={`flex items-center gap-5 flex-col md:flex-row md:justify-betw md:gap-20 w-full md:w-[800px] lg:w-[1000px] xl:w-[1300px] ${flex}`}>
                 {/* Gambar tetap besar dan tidak mengecil */}
                 
-                <div className="flex px-3 md:px-0 w-[490px] md:w-[3000px] xl:w-[1800px] overflow-hidden">
+                <div className="flex px-3 md:px-0 w-[490px] md:w-1/2 overflow-hidden">
                     
                     <motion.div 
                         initial = {{ opacity: 0, x: safeXImage }}
@@ -26,7 +26,7 @@ const SectionTemplate = ({title, description1, description2, img, flex, link, bu
                 
                 
                 {/* Konten teks */}
-                <div className="flex flex-col gap-5 text-[12px] md:text-[16px] px-4 md:px-0">
+                <div className="flex flex-col gap-5 md:w-1/2 text-[12px] md:text-[16px] px-4 md:px-0">
                     <h1 className="relative overflow-hidden">
                         <motion.div
                             initial = {{x : xText}}

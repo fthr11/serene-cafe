@@ -9,7 +9,7 @@ const Section6 = () => {
                 img = {Location}
                 xImage ={"100%"}
                 xText ={-50}
-                flex= {"md:flex-row"}
+                flex= {"md:flex-row-reverse"}
                 title= {"Location"}
                 description1 = {"Serene Cafe has 5 branches, four are located in New York City and one is located in Brooklyn."}
                 button = {"ALL LOCATIONS"}
