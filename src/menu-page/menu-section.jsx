@@ -3,22 +3,15 @@ import MenuCard from "../template/menu-card";
 
 const MenuSection = () => {
     return(
-        // kontainer 
-        <div className="w-screen md:w-full bg-white text-[#221B1A] py-20 md:py-40 flex flex-col gap-10 flex-wrap items-center justify-center">
-
-            {/* Menu - Judulnya */}
-            <div className="w-full max-w-[1300px] px-4 text-3xl md:text-4xl lg:text-5xl text-left">
-                Menu
-            </div>
-
-            {/* Gambar-Gambar di menu */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full max-w-[1300px] px-4">
+        <div className="w-screen md:w-full bg-white text-[#221B1A] flex justify-center py-20 md:py-40">
+            <div className="flex justify items-center gap-5 md:gap-15 flex-wrap md:w-[800px] lg:w-[1000px] xl:w-[1300px] overflow-x-hidden"> 
+                <div className="text-3xl md:text-4xl lg:text-5xl">Menu</div>
                 {menuData.map((menu, id) => (
                     <MenuCard 
                         key={id} 
                         image={menu.img} 
                         title={menu.title}
-                        imgClassName={"w-full h-auto"}
+                        imgClassName={"w-[393px]"}
                     />
                 ))}
             </div>

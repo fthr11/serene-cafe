@@ -5,11 +5,11 @@ const SectionTemplate = ({title, description1, description2, img, flex, link, bu
     const safeXImage = isMobile ? 50: xImage;
 
     return (
-        <div className="w-screen md:w-full bg-white text-[#221B1A] flex justify-center py-20 md:py-40">
-            <div className={`flex items-center gap-5 md:gap-20 flex-col md:w-[800px] lg:w-[1000px] xl:w-[1300px] overflow-x-hidden ${flex}`}>
+        <div className="w-full  overflow-x-hidden md:w-full bg-white text-[#221B1A] flex justify-center py-20 md:py-40">
+            <div className={`flex items-center gap-5 md:gap-20 flex-col w-full md:w-[800px] lg:w-[1000px] xl:w-[1300px] ${flex}`}>
                 {/* Gambar tetap besar dan tidak mengecil */}
                 
-                <div className="flex px-3 md:px-0 w-[450px] md:w-[3000px] xl:w-[1800px]">
+                <div className="flex px-3 md:px-0 w-[450px] md:w-[3000px] xl:w-[1800px] overflow-hidden">
                     
                     <motion.div 
                         initial = {{ opacity: 0, x: safeXImage }}
@@ -18,7 +18,7 @@ const SectionTemplate = ({title, description1, description2, img, flex, link, bu
                         viewport= {{ once: true }}             
                     >
                         <img
-                            className="relative w-full px-8 md:px-0 h-auto object-contain z-10"
+                            className="relative w-full px-8 md:px-0 h-auto object-contain z-10" 
                             src={img}
                         />
                     </motion.div>

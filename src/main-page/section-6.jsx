@@ -7,7 +7,7 @@ const Section6 = () => {
             <SectionTemplate
                 className = "mt-40"
                 img = {Location}
-                xImage ={100}
+                xImage ={"100%"}
                 xText ={-50}
                 flex= {"md:flex-row"}
                 title= {"Location"}
