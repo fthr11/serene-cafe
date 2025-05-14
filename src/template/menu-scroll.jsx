@@ -64,10 +64,10 @@ const MenuScroll = ({ mapping, title }) => {
                         <i onClick={scrollRight} className={setButton('right')}></i>
                     </div>
 
-                    <span className="border rounded-full w-fit px-4 mt-3 font-medium cursor-pointer">
+                    <a href="/menu" className="border rounded-full w-fit px-4 mt-3 font-medium cursor-pointer">
                         SEE MORE
                         <i className="pl-2 ri-arrow-right-line"></i>
-                    </span>
+                    </a>
                 </div>
             </div>
         </div>

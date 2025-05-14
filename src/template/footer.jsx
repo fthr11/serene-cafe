@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
     <footer className="w-full bg-[#B67136] text-white flex justify-center py-10">
-        <div className="flex gap-5 md:gap-100 flex-col md:flex-row md:w-[800px] lg:w-[1000px] xl:w-[1300px]">
+        <div className="flex gap-5 md:gap-100 flex-col md:flex-row w-full px-4 md:px-0 md:w-[800px] lg:w-[1000px] xl:w-[1300px]">
             {/* Brand Info */}
             <div>
                 <h2 className="text-xl font-bold mb-2">Kafe Nikmat</h2>
