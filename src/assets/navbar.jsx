@@ -1,6 +1,7 @@
 import Logo from "/gallery/Logo.webp";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import NavItems from "./nav-items";
 
 const Navbar = () => {
     const [scrollY, setScrollY] = useState(false);
@@ -14,10 +15,14 @@ const Navbar = () => {
         const handleScroll = () => {
             {window.scrollY > 10 ? setScrollY(true): setScrollY(false)}
         };
+        
+        const throttledScroll = () => {
+            requestAnimationFrame(handleScroll);
+        };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', throttledScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', throttledScroll);
         };
     }, []);
 
@@ -62,7 +67,7 @@ const Navbar = () => {
             to:"/contact"
     }]
     return (
-        <nav className={`w-full fixed transition-all z-100 duration-200 ${scrollY ? 'bg-[#B67136]' : 'bg-transparent md:py-6'}`}>
+        <nav className={`w-screen fixed transition-all z-100 duration-200 ${scrollY ? 'bg-[#B67136]' : 'bg-transparent md:py-6'}`}>
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -91,11 +96,11 @@ const Navbar = () => {
 
             <div className="flex justify-center pt-2 pb-3 items-center text-white text-2xl">
                 <li className="hidden md:flex md:gap-32 lg:gap-44 xl:gap-62">
-                    <a href="/" className="text-start cursor-pointer">home</a>
-                    <a href="/about" className="text-start cursor-pointer">about</a>
-                    <img src={Logo} className="w-6 sm:w-auto cursor-pointer" />
-                    <a href="/menu" className="text-start cursor-pointer">menu</a>
-                    <a href="/contact" className="text-start cursor-pointer">contact</a>
+                    <NavItems href='/'>home</NavItems>
+                    <NavItems href='/about'>about</NavItems>
+                    <img src={Logo} className="w-6 sm:w-auto cursor-pointer hover:underline ease-in-out" />
+                    <NavItems href='/menu'>menu</NavItems>
+                    <NavItems href='/contact'>contact</NavItems>                  
                 </li>
 
                 <li className="md:hidden flex justify-between w-screen px-5">

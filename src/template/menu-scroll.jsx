@@ -36,8 +36,8 @@ const MenuScroll = ({ mapping, title }) => {
     };
 
     return (
-        <div className="w-full  bg-white text-[#221B1A] flex justify-center py-20 md:pt-40">
-            <div className="flex flex-col gap-5 md:gap-15 w-full px-5 md:px-0 md:w-[800px] lg:w-[1000px] xl:w-[1300px]">
+        <div className="w-screen bg-white text-[#221B1A] flex justify-center py-20 md:pt-40">
+            <div className="flex flex-col gap-5 md:gap-15 w-full px-5 md:px-3 md:w-[800px] lg:w-[1000px] xl:w-[1300px]">
                 <div className="text-3xl md:text-4xl lg:text-5xl">{title}</div>
 
                 <div className="flex flex-col items-center gap-10">

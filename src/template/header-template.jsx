@@ -1,16 +1,16 @@
-const HeaderTemplate = ({height, img, titleImg}) => {
+const HeaderTemplate = ({height, img, title}) => {
     return (
-        <div className={`relative ${height} w-full overflow-hidden`}>
+        <div className={`relative ${height} w-full font-montserrat overflow-hidden items-center justify-center`}>
             <img 
                 src={img} 
                 alt="Hero" 
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-cover brightness-50" 
             />
-            <img 
-                src={titleImg} 
-                alt="Title Logo"
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120px] md:w-[250px] sm:w-[20px]" 
-            />
+            <h1
+                className="absolute text-white font-medium top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl" 
+            >
+                {title}
+            </h1>
         </div>
     );
 };
