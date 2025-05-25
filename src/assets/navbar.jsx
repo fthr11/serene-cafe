@@ -94,7 +94,7 @@ const Navbar = () => {
                 )}
             </AnimatePresence>
 
-            <div className="flex justify-center pt-2 pb-3 items-center text-white text-2xl">
+            <div className="flex justify-center pt-3 pb-3 items-center text-white text-2xl">
                 <li className="hidden md:flex md:gap-32 lg:gap-44 xl:gap-62">
                     <NavItems href='/'>home</NavItems>
                     <NavItems href='/about'>about</NavItems>

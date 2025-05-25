@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import Cappucino from "/gallery/Cappucino.webp";
 
-const SectionTemplate = ({title, description1, description2, img, flex, link, button, xImage, xText, buttonDisplay}) => {
+const ContactSectionTemplate = ({flex, xImage, form}) => {
     const isMobile = window.innerWidth <= 768;
     const safeXImage = isMobile ? 50: xImage;
 
@@ -19,7 +20,7 @@ const SectionTemplate = ({title, description1, description2, img, flex, link, bu
                     >
                         <img
                             className="relative w-full px-8 md:px-0 h-auto object-contain z-10" 
-                            src={img}
+                            src={Cappucino}
                         />
                     </motion.div>
                 </div>         
@@ -29,52 +30,33 @@ const SectionTemplate = ({title, description1, description2, img, flex, link, bu
                 <div className="flex flex-col gap-5 md:w-1/2 text-[12px] md:text-[16px] px-4 md:px-0">
                     <h1 className="relative overflow-hidden">
                         <motion.div
-                            initial = {{x : xText}}
-                            whileInView = {{ opacity: 1, x: 0}}
+                            initial = {{opacity: 0, y : "100%"}}
+                            whileInView = {{ opacity: 1, y: 0}}
                             transition={{ duration: .5}}
                             viewport= {{ once: true }}
                             className="h-[50px] text-3xl md:text-4xl lg:text-5xl text-start"
                         >
-                            {title}
+                            CONTACT US
                         </motion.div>
                     </h1>
                     
 
-                    <p className="relative overflow-hidden">
-                        <motion.div
-                            initial = {{opacity: 0,x : xText}}
-                            whileInView = {{ opacity: 1, x: 0}}
-                            transition={{ duration: .6}}
-                            viewport= {{ once: true }}
-                            className="text-justify text-sm lg:text-lg md:pt-5"
-                        >
-                            {description1}
-                        </motion.div>
-                        
-                    </p>
-                    <p className="relative overflow-hidden">
-                        <motion.div
-                            initial = {{ opacity: 0, x : xText}}
-                            whileInView = {{ opacity: 1, x: 0}}
-                            transition={{ duration: .7}}
-                            viewport= {{ once: true }}
-                            className="text-justify text-sm lg:text-lg"
-                        >
-                            {description2}
-                        </motion.div>
-                        
-                    </p>
-
-                    <a href={link} className={`${buttonDisplay} border rounded-full w-fit px-4 mt-3 font-medium cursor-pointer`}>
-                        {button}
-                        <i className="pl-2 ri-arrow-right-line"></i>
-                    </a>
+                    <motion.div 
+                        initial = {{opacity: 0, y : 100}}
+                        whileInView = {{ opacity: 1, y: 0}}
+                        transition={{ duration: .8}}
+                        viewport= {{ once: true }}
+                    >
+                        <div> 
+                            {form}
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
     );
 };
 
-export default SectionTemplate;
+export default ContactSectionTemplate;
 
 

@@ -6,8 +6,7 @@ const AboutHeader = () => {
         <>
             <HeaderTemplate
                 img = {LocationImage}
-                height = {'h-[200px] md:h-[500px] lg:h-[600px]'}
-                title = {'about'}
+                title = {'ABOUT'}
                 
             /> 
         </>

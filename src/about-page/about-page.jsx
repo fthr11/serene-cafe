@@ -7,7 +7,7 @@ import AboutSection2 from "./about-section2";
 
 const AboutPage = () => {
     return(
-        <div className="scroll-smooth font-poppins">
+        <div className="scroll-smooth font-montserrat">
             <Navbar/>
             <AboutHeader/>
             <div className="md:py-20">

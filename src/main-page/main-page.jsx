@@ -9,7 +9,7 @@ import Footer from "../template/footer";
 
 const MainPage = () => {
     return(
-        <div className="scroll-smooth font-poppins">
+        <div className="scroll-smooth font-montserrat">
             <Navbar />
             <Section1 />
             <Section2 />

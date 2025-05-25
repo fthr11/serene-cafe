@@ -15,14 +15,14 @@ const Footer = () => {
                 <h3 className="text-lg font-semibold mb-2">LINKS</h3>
                 <div className="text-lg space-x-40 flex flex-row">
                     <ul>
-                        <li><a href="/" className="hover:text-white">Homepage</a></li>
-                        <li><a href="/menu" className="hover:text-white">Menu</a></li>
-                        <li><a href="/menu" className="hover:text-white">About</a></li>
+                        <li><a href="/" className="hover:underline">Homepage</a></li>
+                        <li><a href="/menu" className="hover:underline">Menu</a></li>
+                        <li><a href="/menu" className="hover:underline">About</a></li>
                     </ul>
                     
                     <ul>
-                        <li><a href="/tentang" className="hover:text-white">Contacts</a></li>
-                        <li><a href="/kontak" className="hover:text-white">Locations</a></li>    
+                        <li><a href="/tentang" className="hover:underline">Contacts</a></li>
+                        <li><a href="https://maps.app.goo.gl/aNChpr6Q6JmZPoBk6"  className="hover:underline">Locations</a></li>    
                     </ul>
                 </div>
             </div>
@@ -30,7 +30,7 @@ const Footer = () => {
              {/* Social Media */}
             <div className="text-lg">
                 <h3 className="font-semibold mb-2">Contacs</h3>
-                <p href="/" className="hover:text-white">Serenecafe@gmail.com</p>
+                <p  className="hover:underline">Serenecafe@gmail.com</p>
             </div>
 
             <div>

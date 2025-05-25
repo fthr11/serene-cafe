@@ -12,8 +12,8 @@ const AboutTemplate = ({title, description1, description2, img, flex, link, butt
                 <div className="flex px-3 md:px-0 w-[490px] md:w-1/2 overflow-hidden">
                     
                     <motion.div 
-                        initial = {{ scale: 0, safeXImage }}
-                        whileInView = {{ scale:1, }}
+                        initial = {{ opacity:0, scale: 0, safeXImage }}
+                        whileInView = {{ opacity: 1, scale:1, }}
                         transition={{ duration: .5}}
                         viewport= {{ once: true }}             
                     >
