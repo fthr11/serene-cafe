@@ -7,7 +7,6 @@ const Footer = () => {
             {/* Brand Info */}
             <div>
                 <img className="w-[140px]" src={TitleLogo}/>
-
             </div>
 
             {/* Navigation Links */}
